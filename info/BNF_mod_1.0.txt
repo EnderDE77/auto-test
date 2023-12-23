@@ -1,0 +1,39 @@
+<parmeter>
+
+[{<parameter>}]
+
+
+<parameter>:
+<arg_name>_<arg_type>[{_<arg_extras>}]
+[|<arg_name>_<arg_type>] //if array
+[{&<jerry>}]
+
+
+<arg_name>: Any name, as long as it has no underscore (_)
+<arg_extras>: may have size if array or sorted
+<arg_type>:{
+    int,
+    char,
+    array,
+    string,
+    bool
+    }
+<jerry>:
+<jerry_name>_<jerry_condition>
+
+
+<jerry_name>: Any name, as long as it has no underscore (_)
+<jerry_condition>:
+<expression>[.<value>]
+
+
+<value>: value in integer or regex (depends on <expression>)
+<expression>: {
+    sortedA (no value), //array will be sorted in ascending order
+    sortedD (no value), //array will be sorted in descending order
+    match (takes regex), //string will match regex
+    > (takes int), //bigger than <value>
+    < (takes int), //smaller than <value>
+    = (takes int), //equal to <value>
+    ! (takes int), //not equal to <value>
+    }

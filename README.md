@@ -34,3 +34,4 @@ This should work for any procedurial paradigm problem (e.g C)
 - Added double as data type (dubbed **dub**)
 - Removed char data type (int in disguise)
 - Removed bool data type (int in disguise)
+- Removed <arg_extras> from BNF

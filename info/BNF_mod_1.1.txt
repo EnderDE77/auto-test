@@ -1,0 +1,43 @@
+<parameter>
+
+
+<parameter>:
+<arg>
+[{<arg>}]
+&& //jerry mashup
+[{<jerry_name>[{.<jerry_name>}].<jerry_mashup_val>}]
+
+<arg>:
+<arg_name>_<arg_type>
+[|<arg>]
+[{&<jerry>}]
+
+<arg_name>: Any name, as long as it has no underscore (_)
+<arg_type>:{
+    int,
+    array,
+    dub,
+    string
+}
+<jerry>:
+<jerry_name>_<jerry_condition>
+
+<jerry_name>: Any name, as long as it has no underscore (_)
+<jerry_condition>:
+<expression>.<value>
+
+<value>: value in number or regex (depends on <expression>)
+<expression>:{
+    sortedA (no val),
+    sortedD (no val),
+    size (expresion), //size of array
+    match (regex),
+    cont (regex), //string conatins regex
+    len (number), //length of string
+    > (number),
+    < (number),
+    = (number),
+    ! (number),
+    >= (number), //bigger or equal to value
+    <= (number) //smaller or equal to value
+}
