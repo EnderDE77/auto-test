@@ -1,0 +1,5 @@
+arg1_int
+&GreaterThan5_>.5
+
+&&
+arg1_GreaterThan5.T

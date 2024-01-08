@@ -5,7 +5,7 @@
 <arg>
 [{<arg>}]
 && //jerry mashup
-[{<jerry_name>[{.<jerry_name>}].<jerry_mashup_val>}]
+[{<arg_name>_<jerry_name>[{.<arg_name>_<jerry_name>}].<jerry_mashup_val>}]
 
 <arg>:
 <arg_name>_<arg_type>
@@ -40,4 +40,8 @@
     ! (number),
     >= (number), //bigger or equal to value
     <= (number) //smaller or equal to value
+}
+<jerry_mashup_val>:{
+    T, //must include this combinattion of jerrys
+    F //must exclude this combination of jerrys
 }
